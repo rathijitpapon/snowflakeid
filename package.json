@@ -1,0 +1,30 @@
+{
+  "name": "snowflakeid",
+  "version": "1.0.0",
+  "description": "A simple and fast unique id generator for node.js. It generates unique id based on twitter's snowflake algorithm.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rathijitpapon/snowflakeid.git"
+  },
+  "keywords": [
+    "snowflakeid",
+    "snowflake",
+    "unique-id",
+    "unique",
+    "id",
+    "unique-id-generator",
+    "flake",
+    "flake-id",
+    "generator"
+  ],
+  "author": "Rathijit Paul",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rathijitpapon/snowflakeid/issues"
+  },
+  "homepage": "https://github.com/rathijitpapon/snowflakeid#readme"
+}
