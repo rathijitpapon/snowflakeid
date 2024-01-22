@@ -1,5 +1,5 @@
 {
-  "name": "snowflakeid",
+  "name": "snowflakeid-producer",
   "version": "1.0.0",
   "description": "A simple and fast unique id generator for node.js. It generates unique id based on twitter's snowflake algorithm.",
   "main": "index.js",
@@ -11,6 +11,7 @@
     "url": "git+https://github.com/rathijitpapon/snowflakeid.git"
   },
   "keywords": [
+    "snowflakeid-producer",
     "snowflakeid",
     "snowflake",
     "unique-id",

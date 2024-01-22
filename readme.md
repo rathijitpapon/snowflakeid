@@ -7,7 +7,7 @@ Snowflake ID is a 64-bit integer, which is composed of: 41 bits of time stamp in
 ## Installation
 
 ```bash
-npm install snowflakeid
+npm install snowflakeid-producer
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install snowflakeid
 ### Default Configuration
 
 ```js
-const { SnowflakeId } = require('snowflakeid')
+const { SnowflakeId } = require('snowflakeid-producer')
 
 // New unique id
 // Returns a string e.g. "7775828467560448"
@@ -40,7 +40,7 @@ const content = SnowflakeId.parseId('7775772507156480')
 ### Custom Configuration
 
 ```js
-const { CustomSnowflakeId } = require('snowflakeid')
+const { CustomSnowflakeId } = require('snowflakeid-producer')
 
 // Initialize with machine id bits, sequence bits, machine id and first timestamp
 const snowflakeId = new CustomSnowflakeId({

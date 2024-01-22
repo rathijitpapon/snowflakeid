@@ -9,7 +9,7 @@ const defaultSnowflake = new SnowflakeIdGenerator(10, 12, null, new Date('2024-0
  * @class
  * @methods newId, getFirstIdAt, getLastIdAt, parseId
  * @example
- * const { SnowflakeId } = require('snowflakeid')
+ * const { SnowflakeId } = require('snowflakeid-producer')
  * const id = SnowflakeId.newId()
  * console.log(id) // 1234567890123456789
  * console.log(typeof id) // string
@@ -39,7 +39,7 @@ class SnowflakeId {
      * @throws {Error} If SnowflakeId generator is not initialized properly
      * @static
      * @example
-     * const { SnowflakeId } = require('snowflakeid')
+     * const { SnowflakeId } = require('snowflakeid-producer')
      * const id = SnowflakeId.newId()
      * console.log(id) // 1234567890123456789
      * console.log(typeof id) // string
@@ -58,7 +58,7 @@ class SnowflakeId {
      * @throws {Error} If SnowflakeId generator is not initialized properly or timestamp is invalid
      * @static
      * @example
-     * const { SnowflakeId } = require('snowflakeid')
+     * const { SnowflakeId } = require('snowflakeid-producer')
      * const id = SnowflakeId.getFirstIdAt(1635724800000)
      * console.log(id) // 1234567890123456789
      * console.log(typeof id) // string
@@ -77,7 +77,7 @@ class SnowflakeId {
      * @throws {Error} If SnowflakeId generator is not initialized properly or timestamp is invalid
      * @static
      * @example
-     * const { SnowflakeId } = require('snowflakeid')
+     * const { SnowflakeId } = require('snowflakeid-producer')
      * const id = SnowflakeId.getLastIdAt(1635724800000)
      * console.log(id) // 1234567890123456789
      * console.log(typeof id) // string
@@ -96,7 +96,7 @@ class SnowflakeId {
      * @throws {Error} If snowflakeId is invalid
      * @static
      * @example
-     * const { SnowflakeId } = require('snowflakeid')
+     * const { SnowflakeId } = require('snowflakeid-producer')
      * const content = SnowflakeId.parseId('1234567890123456789')
      * console.log(content) // { timestamp: 2024-01-01T00:00:00.000Z, machineId: 0, sequence: 0 }
      * console.log(typeof content) // object

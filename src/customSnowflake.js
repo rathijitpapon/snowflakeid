@@ -14,7 +14,7 @@ const SnowflakeIdGenerator = require('./snowflake')
  * @class
  * @methods newId, getFirstIdAt, getLastIdAt, parseId
  * @example
- * const { CustomSnowflakeId } = require('snowflakeid')
+ * const { CustomSnowflakeId } = require('snowflakeid-producer')
  * const snowflakeId = new CustomSnowflakeId({
  *  MachineIdBits: 10,
  *  SequenceBits: 12,
@@ -115,7 +115,7 @@ class CustomSnowflakeId {
      * @returns {string} SnowflakeId
      * @throws {Error} If SnowflakeId generator is not initialized properly
      * @example
-     * const { CustomSnowflakeId } = require('snowflakeid')
+     * const { CustomSnowflakeId } = require('snowflakeid-producer')
      * const snowflakeId = new CustomSnowflakeId({
      *  MachineIdBits: 10,
      *  SequenceBits: 12,
@@ -139,7 +139,7 @@ class CustomSnowflakeId {
      * @returns {string} SnowflakeId
      * @throws {Error} If SnowflakeId generator is not initialized properly or timestamp is invalid
      * @example
-     * const { CustomSnowflakeId } = require('snowflakeid')
+     * const { CustomSnowflakeId } = require('snowflakeid-producer')
      * const snowflakeId = new CustomSnowflakeId({
      *  MachineIdBits: 10,
      *  SequenceBits: 12,
@@ -163,7 +163,7 @@ class CustomSnowflakeId {
      * @returns {string} SnowflakeId
      * @throws {Error} If SnowflakeId generator is not initialized properly or timestamp is invalid
      * @example
-     * const { CustomSnowflakeId } = require('snowflakeid')
+     * const { CustomSnowflakeId } = require('snowflakeid-producer')
      * const snowflakeId = new CustomSnowflakeId({
      *  MachineIdBits: 10,
      *  SequenceBits: 12,
@@ -187,7 +187,7 @@ class CustomSnowflakeId {
      * @returns {object} parsed object containing timestamp, machineId, sequence
      * @throws {Error} If snowflakeId is invalid
      * @example
-     * const { CustomSnowflakeId } = require('snowflakeid')
+     * const { CustomSnowflakeId } = require('snowflakeid-producer')
      * const snowflakeId = new CustomSnowflakeId({
      *  MachineIdBits: 10,
      *  SequenceBits: 12,
