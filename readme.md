@@ -18,18 +18,22 @@ npm install snowflakeid
 const { SnowflakeId } = require('snowflakeid')
 
 // New unique id
-const newId = SnowflakeId.newId() // returns a string e.g. "7775828467560448"
+// Returns a string e.g. "7775828467560448"
+const newId = SnowflakeId.newId()
 
 // First ID of a given timestamp. Parameters: timestamp (in milliseconds or Date object)
-const firstId1 = SnowflakeId.getFirstIdAt(1787389012309) // returns a string e.g. "349477010654887936"
-const firstId2 = SnowflakeId.getFirstIdAt(new Date('2025-05-03T00:00:00.000Z')) // returns a string e.g. "176845278412800000"
+// Returns a string e.g. "349477010654887936"
+const firstId1 = SnowflakeId.getFirstIdAt(1787389012309) 
+const firstId2 = SnowflakeId.getFirstIdAt(new Date('2025-05-03T00:00:00.000Z'))
 
 // Last ID of a given timestamp. Parameters: timestamp (in milliseconds or Date object)
-const lastId1 = SnowflakeId.getLastIdAt(1787389012309) // returns a string e.g. "349477010659082239"
-const lastId2 = SnowflakeId.getLastIdAt(new Date('2025-05-03T00:00:00.000Z')) // returns a string e.g. "176845278416994303"
+// Returns a string e.g. "349477010659082239"
+const lastId1 = SnowflakeId.getLastIdAt(1787389012309) 
+const lastId2 = SnowflakeId.getLastIdAt(new Date('2025-05-03T00:00:00.000Z'))
 
 // Parse an id to get its timestamp, machine id and sequence number. Parameters: id (numeric string)
-const content = SnowflakeId.parseId('7775772507156480') // returns an object e.g. { timestamp: 2024-01-22T10:58:08.632Z, machineId: 587, sequence: 0 }
+// Returns an object e.g. { timestamp: 2024-01-22T10:58:08.632Z, machineId: 587, sequence: 0 }
+const content = SnowflakeId.parseId('7775772507156480')
 ```
 
 
@@ -47,16 +51,20 @@ const snowflakeId = new CustomSnowflakeId({
 })
 
 // New unique id
-const newId = snowflakeId.newId() // returns a string e.g. "7729254429405184"
+// Returns a string e.g. "7729254429405184"
+const newId = snowflakeId.newId()
 
-// First ID of a given timestamp. Parameters: timestamp (in milliseconds or Date object)
-const firstId = snowflakeId.getFirstIdAt(1677389012309)// returns a string e.g. "240706963883687936"
+// First ID of a given timestamp. Parameters: timestamp (in milliseconds or Date object).
+// Returns a string e.g. "240706963883687936"
+const firstId = snowflakeId.getFirstIdAt(1677389012309)
 
 // Last ID of a given timestamp. Parameters: timestamp (in milliseconds or Date object)
-const lastId = snowflakeId.getLastIdAt(1677389012309) // returns a string e.g. "240706963887882239"
+// Returns a string e.g. "240706963887882239"
+const lastId = snowflakeId.getLastIdAt(1677389012309)
 
 // Parse an id to get its timestamp, machine id and sequence number. Parameters: id (numeric string)
-const content = snowflakeId.parseId('240706963887882239') // returns an object e.g. { timestamp: 2023-02-26T05:23:32.309Z, machineId: 1023, sequence: 4095 }
+// Returns an object e.g. { timestamp: 2023-02-26T05:23:32.309Z, machineId: 1023, sequence: 4095 }
+const content = snowflakeId.parseId('240706963887882239') 
 ```
 
 ## Custome Configuration Options
