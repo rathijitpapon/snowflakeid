@@ -12,32 +12,16 @@ npm install snowflakeid-producer
 
 ## Usage
 
-### Default Configuration
+#### Default Configuration
 
 ```js
 const { SnowflakeId } = require('snowflakeid-producer')
 
-// New unique id
-// Returns a string e.g. "7775828467560448"
-const newId = SnowflakeId.newId()
-
-// First ID of a given timestamp. Parameters: timestamp (in milliseconds or Date object)
-// Returns a string e.g. "349477010654887936"
-const firstId1 = SnowflakeId.getFirstIdAt(1787389012309) 
-const firstId2 = SnowflakeId.getFirstIdAt(new Date('2025-05-03T00:00:00.000Z'))
-
-// Last ID of a given timestamp. Parameters: timestamp (in milliseconds or Date object)
-// Returns a string e.g. "349477010659082239"
-const lastId1 = SnowflakeId.getLastIdAt(1787389012309) 
-const lastId2 = SnowflakeId.getLastIdAt(new Date('2025-05-03T00:00:00.000Z'))
-
-// Parse an id to get its timestamp, machine id and sequence number. Parameters: id (numeric string)
-// Returns an object e.g. { timestamp: 2024-01-22T10:58:08.632Z, machineId: 587, sequence: 0 }
-const content = SnowflakeId.parseId('7775772507156480')
+// Initialize with default configuration
+const snowflakeId = SnowflakeId;
 ```
 
-
-### Custom Configuration
+#### Custom Configuration
 
 ```js
 const { CustomSnowflakeId } = require('snowflakeid-producer')
@@ -49,25 +33,34 @@ const snowflakeId = new CustomSnowflakeId({
     MachineId: 1,
     FirstTimestamp: new Date('2021-05-03T00:00:00.000Z'),
 })
-
-// New unique id
-// Returns a string e.g. "7729254429405184"
-const newId = snowflakeId.newId()
-
-// First ID of a given timestamp. Parameters: timestamp (in milliseconds or Date object).
-// Returns a string e.g. "240706963883687936"
-const firstId = snowflakeId.getFirstIdAt(1677389012309)
-
-// Last ID of a given timestamp. Parameters: timestamp (in milliseconds or Date object)
-// Returns a string e.g. "240706963887882239"
-const lastId = snowflakeId.getLastIdAt(1677389012309)
-
-// Parse an id to get its timestamp, machine id and sequence number. Parameters: id (numeric string)
-// Returns an object e.g. { timestamp: 2023-02-26T05:23:32.309Z, machineId: 1023, sequence: 4095 }
-const content = snowflakeId.parseId('240706963887882239') 
 ```
 
-## Custome Configuration Options
+#### Methods
+
+```js
+// New unique id
+// Returns a string e.g. "7775828467560448"
+const newId = snowflakeId.newId()
+
+// First id of a given timestamp
+// Parameters: timestamp (in milliseconds or Date object)
+// Returns a string e.g. "349477010654887936"
+const firstId1 = snowflakeId.getFirstIdAt(1787389012309) 
+const firstId2 = snowflakeId.getFirstIdAt(new Date('2025-05-03T00:00:00.000Z'))
+
+// Last id of a given timestamp
+// Parameters: timestamp (in milliseconds or Date object)
+// Returns a string e.g. "349477010659082239"
+const lastId1 = snowflakeId.getLastIdAt(1787389012309) 
+const lastId2 = snowflakeId.getLastIdAt(new Date('2025-05-03T00:00:00.000Z'))
+
+// Parse an id
+// Parameters: id (numeric string)
+// Returns an object e.g. { timestamp: 2024-01-22T10:58:08.632Z, machineId: 587, sequence: 0 }
+const content = snowflakeId.parseId('7775772507156480')
+```
+
+## Custom Configuration Options
 1. ```MachineIdBits```: Number of bits to use for machine id. Can be ```0``` to ```21```. Default value is ```10```.
 2. ```SequenceBits```: Number of bits to use for sequence. Can be ```0``` to ```21```. Default value is ```12```.
 3. ```MachineId```: Machine id to use. Can be ```0``` to ```pow(2, MachineIdBits) - 1```. Note that if ```MachineId``` is not provided, it will be generated from mac address.
