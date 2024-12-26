@@ -1,8 +1,18 @@
 # Snowflake ID
 
-A tiny and simple module to generate unique time-based 64-bit IDs. It is inspired by Twitter's Snowflake Id.
+## Overview
 
-Snowflake ID is a 64-bit integer, which is composed of: 41 bits of time stamp in milliseconds (gives us 69 years with a custom epoch), 10 bits of configurable machine id, and 12 bits of sequence number, and 1 unused sign bit. It is designed to generate IDs at high scale.
+The Snowflake ID module provides a lightweight and efficient solution for generating unique, time-based 64-bit identifiers. Inspired by Twitter's Snowflake ID generation system, this module is designed to produce IDs at high scale while ensuring uniqueness across distributed systems.
+
+## Structure of Snowflake ID
+
+A Snowflake ID is a 64-bit integer composed of the following components:
+- **41 bits**: Timestamp in milliseconds, allowing for a range of approximately 69 years with a custom epoch.
+- **10 bits**: Configurable machine ID, enabling identification of different machines in a distributed environment.
+- **12 bits**: Sequence number, which allows for the generation of multiple IDs within the same millisecond.
+- **1 bit**: Unused sign bit.
+
+This structure ensures that each generated ID is unique and can be efficiently created in high-throughput scenarios.
 
 ## Installation
 
