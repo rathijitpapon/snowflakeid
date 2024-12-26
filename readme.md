@@ -1,5 +1,7 @@
 # Snowflake ID
 
+[![NPM Version](https://img.shields.io/npm/v/snowflakeid-producer)](https://www.npmjs.com/package/snowflakeid-producer) [![NPM](https://img.shields.io/npm/dt/snowflakeid-producer)](https://www.npmjs.com/package/snowflakeid-producer) ![NPM License](https://img.shields.io/npm/l/snowflakeid-producer)
+
 ## Overview
 
 The Snowflake ID module provides a lightweight and efficient solution for generating unique, time-based 64-bit identifiers. Inspired by Twitter's Snowflake ID generation system, this module is designed to produce IDs at high scale while ensuring uniqueness across distributed systems.
